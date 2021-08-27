@@ -1,0 +1,16 @@
+Principio de Redux
+
+*   Solo un STORE con todo el state de la aplicacion 
+*   Los componentes / vistas no modifican el STATE directamente
+*   El STATE se modifica por medio de funciones (ACTIONS)
+
+STORE:      contiene todo los state 
+DISPATCH:   ejecuta una funcion que actualiza el state 
+ACTIONS:    es un objetos JS, tiene un tipo (que describe la accion) y payload(datos que va utilizar para esta accion) 
+SUBSCRIBE:  similar a un event listener para el STATE 
+REDUCERS:   funciones, saben que hacer con las acciones y el payload
+
+STORE se comunica con el REDUCERS , se le pasa un STATE y una ACTION, REDUCERS una vez procesada la accion y payload, 
+le retorna un NUEVO STATE, depues el STORE se comunica con la VISTA pasando el nuevo state.
+
+En la VISTA los usuarios realizan ACTION, interacciones, y la ACTION comunica el STORE le dice la ACTION del usuario mediante DISPATCH 
